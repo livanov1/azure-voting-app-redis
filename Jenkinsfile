@@ -5,8 +5,9 @@ pipeline {
         stage('Echo declarative') {
             steps {
                 echo "$GIT_BRANCH"
-                echo "this is a tyest"
+                echo "this is a master branch"
             }
+        }
         stage('Echo declarative') {
             when {
                 branch '*master'
