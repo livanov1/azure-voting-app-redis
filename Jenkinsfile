@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Echo declarative') {
             when {
-                branch 'origin/master'
+                branch '*master'
             }
             steps {
                 echo "$GIT_BRANCH"
