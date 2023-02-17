@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Echo declarative') {
+        stage('Branch check') {
             steps {
                 echo "$GIT_BRANCH"
                 echo "this is a master branch"
