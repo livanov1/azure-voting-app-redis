@@ -9,5 +9,10 @@ pipeline {
                 }
             }
         }
+        stage('Testing'){
+            steps{
+                echo 'This should be out there in the console'
+            }
+        }
     }
 }
