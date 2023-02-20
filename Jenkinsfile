@@ -1,4 +1,5 @@
-@Library('https://github.com/livanov1/demo-shared-pipeline') _ 
+library 'https://github.com/livanov1/demo-shared-pipeline'
+
 pipeline {
     agent any
     stages {
