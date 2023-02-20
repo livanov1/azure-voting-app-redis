@@ -2,8 +2,12 @@ name: first-github-action
 on: [push]
 jobs:
   check-bats-version:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
+      -run: echo "The job was triggered."
+      -run: echo "The job is now running."
+      -run: echo "Name of your branch is ${{ github.ref }} and your repo is ${{ github.repository }}."
+      -name: Check out repository code
       -uses: actions/checkout@v2
       -uses: actions/setup-node@v1
       -run: npm install -g bats
