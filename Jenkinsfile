@@ -5,7 +5,11 @@ pipeline {
         stage('call library'){
             steps {
                 script {
-                    helloWorld()
+                    try {
+                        helloWorld()
+                    } catch (Exception) {
+                        echo 'Exception occured: ' + e.toString()
+                    } 
                 }
             }
         }
