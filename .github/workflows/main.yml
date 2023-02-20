@@ -1,12 +1,12 @@
 name: sample-workflow
 on: [push]
 jobs:
-  explore-first-github-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      -run: echo "The job was triggered."
-      -run: echo "The job is now running."
-      -run: echo "Name of your branch is ${{ github.ref }} and your repo is ${{ github.repository }}."
-       uses: actions/checkout@v2
-      -run: npm install -g bats
-      -run: bats -v
+ explore-first-github-workflow:
+  runs-on: ubuntu-latest
+  steps:
+  - run: echo "The job was triggered."
+  - run: echo "The job is now running."
+  - run: echo "Name of your branch is ${{ github.ref }} and your repo is ${{ github.repository }}."
+    uses: actions/checkout@v2
+  - run: npm install -g bats
+  - run: bats -v
